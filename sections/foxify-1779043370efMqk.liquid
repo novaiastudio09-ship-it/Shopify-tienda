@@ -1,0 +1,143 @@
+
+{% liquid
+  
+    assign locales = shop.metafields.foxify.locales.value
+    assign current_locale = request.locale.iso_code
+    assign primary_locale = current_locale
+    for locale in shop.published_locales
+    if locale.primary
+        assign primary_locale = locale.iso_code
+        break
+    endif
+    endfor
+    assign translation = locales[current_locale] | default: locales[primary_locale]
+
+    assign theme_settings = shop.metafields.foxify.theme_settings.value
+    assign productCard = theme_settings.productCard
+  
+  
+      assign foxifyCustomCss = shop.metafields.foxify['6a0a0c29c73e3dc6f445e3df'].value.customCss
+      assign foxifyCustomJs = shop.metafields.foxify['6a0a0c29c73e3dc6f445e3df'].value.customJs
+    
+%}
+
+      <script>
+        window.Foxify = window.Foxify || {}
+        Foxify.ThemeStyles = {
+          product: "https:{{ 'foxify-product.css' | asset_url }}",
+          swiper: "https:{{ 'foxify-swiper.css' | asset_url }}",
+        }
+
+        Foxify.ThemeScripts = {
+          productModel: "https:{{ 'foxify-product-model.js' | asset_url }}",
+          productMedia: "https:{{ 'foxify-media-gallery.js' | asset_url }}",
+          variantPicker: "https:{{ 'foxify-variant-picker.js' | asset_url }}"
+        }
+
+        Foxify.pageId = '1779043370efMqk';
+        Foxify.default = false;
+      </script>
+    
+<div class="x-app x-main">
+{{ 'foxify-1779043370efMqk.css' | asset_url | stylesheet_tag }}
+<style data-foxify-custom-code-page="css">{{ foxifyCustomCss }}</style>
+<div data-foxify-editor="svg-templates" style="display: none;"></div>
+<div id="x-xldqkdkf" class="x-section x-xldqkdkf" style="--x-container-width: 1270px;"><div class="x-container-custom x-layout-grid"><div id="x-ezmxj9kc" class="x-layout-auto x-stack x-ezmxj9kc x-element">{% assign product_x-2cw8ty14 = product %}{% assign collection_x-2cw8ty14 = collection %}<p id="x-2cw8ty14" class="x-layout-none x-text x-2cw8ty14 x-element x-animation-entrance x-animation-entrance:xFadeInUp x-rte">
+{{ 'sections.foxify-1779043370efMqk.x-2cw8ty14-text_html' | t }}</p>{% assign product_x-9jkbsdmq = product %}{% assign collection_x-9jkbsdmq = collection %}<h2 id="x-9jkbsdmq" class="x-layout-none x-text x-9jkbsdmq x-element x-animation-entrance x-animation-entrance:xFadeInUp x-rte">
+{{ 'sections.foxify-1779043370efMqk.x-9jkbsdmq-text_html' | t }}</h2><a id="x-666l63cu" href="#" class="x-layout-none x-button x-666l63cu x-element x-animation-entrance x-animation-entrance:xFadeInUp"><span>
+{{ 'sections.foxify-1779043370efMqk.x-666l63cu-button_label_html' | t }}</span></a></div></div></div><div id="x-tunzthub" class="x-section x-tunzthub"><div class="x-container-full x-layout-grid"><div id="x-w36rdmzv" class="x-slideshow x-w36rdmzv x-element"><div class="x-slideshow-wrapper x-layout-grid"><x-slider-component id="X-Slider-x-w36rdmzv" class="x-swiper x-slideshow__slides x-element" data-swiper-options="{&quot;navigation&quot;:false,&quot;pagination&quot;:false,&quot;autoHeight&quot;:false,&quot;paginationType&quot;:&quot;bullets&quot;,&quot;loop&quot;:true,&quot;autoplay&quot;:{&quot;delay&quot;:3000,&quot;disableOnInteraction&quot;:false,&quot;pauseOnMouseEnter&quot;:true},&quot;effect&quot;:&quot;fade&quot;,&quot;fadeEffect&quot;:{&quot;crossFade&quot;:true}}" data-pagination-type="bullets" data-destroy-on-mobile="false" data-overflow-slider="false" data-total-slides="2" style="--swiper-desktop-column: 4;"><div class="x-swiper-container"><div class="x-swiper-wrapper"><div class="x-swiper-slide"><div id="x-ojwpj35o" class="x-slideshow-content x-ojwpj35o x-element"><div class="x-slideshow__content-wrapper x-layout-grid"><div id="x-teio52hy" class="x-layout-grid x-frame x-teio52hy x-element"><div id="x-h8ncd5kp" class="x-layout-auto x-stack x-h8ncd5kp x-element x-animation-entrance x-animation-entrance:xFadeIn">{% assign product_x-83niyqad = product %}{% assign collection_x-83niyqad = collection %}<h2 id="x-83niyqad" class="x-layout-none x-text x-83niyqad x-element x-animation-entrance x-animation-entrance:xFadeInUp x-rte">
+{{ 'sections.foxify-1779043370efMqk.x-83niyqad-text_html' | t }}</h2>{% assign product_x-g73uug8n = product %}{% assign collection_x-g73uug8n = collection %}<p id="x-g73uug8n" class="x-layout-none x-text x-g73uug8n x-element x-animation-entrance x-animation-entrance:xFadeInUp x-rte">
+{{ 'sections.foxify-1779043370efMqk.x-g73uug8n-text_html' | t }}</p><a id="x-zakrjl22" href="#" class="x-layout-none x-button x-zakrjl22 x-element x-animation-entrance x-animation-entrance:xFadeInUp"><span>
+{{ 'sections.foxify-1779043370efMqk.x-zakrjl22-button_label_html' | t }}</span></a></div></div></div><div class="x-slideshow__content-media x-slideshow__content-media--desktop x-bg-image"></div></div></div><div class="x-swiper-slide"><div id="x-mkjbdj0b" class="x-slideshow-content x-mkjbdj0b x-element"><div class="x-slideshow__content-wrapper x-layout-grid"><div id="x-jweilctk" class="x-layout-grid x-frame x-jweilctk x-element"><div id="x-97vnepq3" class="x-layout-auto x-stack x-97vnepq3 x-element x-animation-entrance x-animation-entrance:xFadeIn">{% assign product_x-7lzh8cw5 = product %}{% assign collection_x-7lzh8cw5 = collection %}<h2 id="x-7lzh8cw5" class="x-layout-none x-text x-7lzh8cw5 x-element x-animation-entrance x-animation-entrance:xFadeInUp x-rte">
+{{ 'sections.foxify-1779043370efMqk.x-7lzh8cw5-text_html' | t }}</h2>{% assign product_x-go31zd07 = product %}{% assign collection_x-go31zd07 = collection %}<p id="x-go31zd07" class="x-layout-none x-text x-go31zd07 x-element x-animation-entrance x-animation-entrance:xFadeInUp x-rte">
+{{ 'sections.foxify-1779043370efMqk.x-go31zd07-text_html' | t }}</p><a id="x-b9qe66se" href="#" class="x-layout-none x-button x-b9qe66se x-element x-animation-entrance x-animation-entrance:xFadeInUp"><span>
+{{ 'sections.foxify-1779043370efMqk.x-b9qe66se-button_label_html' | t }}</span></a></div></div></div><div class="x-slideshow__content-media x-slideshow__content-media--desktop x-bg-image"></div></div></div></div></div></x-slider-component><div id="x-8waq84ql" class="x-layout-none x-slider-controls x-8waq84ql x-element"><x-carousel-control class="x-swiper-controls x-swiper-controls--static x-swiper-pagination--bullets" data-pagination-type="bullets"><div class="x-swiper-controls__inner"><div class="x-swiper-button x-hidden x-swiper-button-prev"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.1875 9H2.8125" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7.875 3.9375L2.8125 9L7.875 14.0625" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="x-swiper-pagination"></div><div class="x-swiper-button x-hidden x-swiper-button-next"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.8125 9H15.1875" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10.125 3.9375L15.1875 9L10.125 14.0625" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></x-carousel-control></div></div></div></div></div><div id="x-xldqkdkf" class="x-section x-xldqkdkf" style="--x-container-width: 1270px;"><div class="x-container-custom x-layout-grid"><div id="x-ezmxj9kc" class="x-layout-auto x-stack x-ezmxj9kc x-element">{% assign product_x-2cw8ty14 = product %}{% assign collection_x-2cw8ty14 = collection %}<p id="x-2cw8ty14" class="x-layout-none x-text x-2cw8ty14 x-element x-animation-entrance x-animation-entrance:xFadeInUp x-rte">
+{{ 'sections.foxify-1779043370efMqk.x-2cw8ty14-text_html' | t }}</p>{% assign product_x-9jkbsdmq = product %}{% assign collection_x-9jkbsdmq = collection %}<h2 id="x-9jkbsdmq" class="x-layout-none x-text x-9jkbsdmq x-element x-animation-entrance x-animation-entrance:xFadeInUp x-rte">
+{{ 'sections.foxify-1779043370efMqk.x-9jkbsdmq-text_html' | t }}</h2><a id="x-666l63cu" href="#" class="x-layout-none x-button x-666l63cu x-element x-animation-entrance x-animation-entrance:xFadeInUp"><span>
+{{ 'sections.foxify-1779043370efMqk.x-666l63cu-button_label_html' | t }}</span></a></div></div></div><div id="x-wzhticcw" class="x-section x-wzhticcw" style="--x-container-width: 1240px;"><div class="x-container-custom x-layout-grid"><div id="x-ctm4h7a8" class="x-layout-auto x-stack x-ctm4h7a8 x-element"><div id="x-vfa4gj7l" class="x-layout-auto x-stack x-vfa4gj7l x-element">{% assign product_x-xvbcvxj9 = product %}{% assign collection_x-xvbcvxj9 = collection %}<p id="x-xvbcvxj9" class="x-layout-none x-text x-xvbcvxj9 x-element x-rte">
+{{ 'sections.foxify-1779043370efMqk.x-xvbcvxj9-text_html' | t }}</p>{% assign product_x-nossc2t7 = product %}{% assign collection_x-nossc2t7 = collection %}<h2 id="x-nossc2t7" class="x-layout-none x-text x-nossc2t7 x-element x-rte">
+{{ 'sections.foxify-1779043370efMqk.x-nossc2t7-text_html' | t }}</h2></div><div id="x-3i94au6v" class="x-layout-none x-grid x-3i94au6v x-element x-mobile-swiper sm:x-grid-1 md:x-grid-2 x-grid-3" style="--x-column-gap: 65px; --x-md-column-gap: 40px; --x-sm-column-gap: 30px; --x-row-gap: 32px; --x-md-row-gap: 24px; --x-sm-row-gap: 16px;"><div id="x-i8l4g4c8" class="x-layout-auto x-cell x-i8l4g4c8 x-element"><div id="x-ednmes6m" class="x-layout-none x-image-element x-ednmes6m x-element x-image--fill"><x-image class="x-image" data-priority="auto">{{ 'image'| placeholder_svg_tag: 'x-placeholder-svg' }}</x-image></div>{% assign product_x-9xvapqi9 = product %}{% assign collection_x-9xvapqi9 = collection %}<h3 id="x-9xvapqi9" class="x-layout-none x-text x-9xvapqi9 x-element x-rte">
+{{ 'sections.foxify-1779043370efMqk.x-9xvapqi9-text_html' | t }}</h3></div><div id="x-xymhzewv" class="x-layout-auto x-cell x-xymhzewv x-element"><div id="x-zrdz7sjr" class="x-layout-none x-image-element x-zrdz7sjr x-element x-image--fill"><x-image class="x-image" data-priority="auto">{{ 'image'| placeholder_svg_tag: 'x-placeholder-svg' }}</x-image></div>{% assign product_x-krfu3rxt = product %}{% assign collection_x-krfu3rxt = collection %}<h3 id="x-krfu3rxt" class="x-layout-none x-text x-krfu3rxt x-element x-rte">
+{{ 'sections.foxify-1779043370efMqk.x-krfu3rxt-text_html' | t }}</h3></div><div id="x-10j11969" class="x-layout-auto x-cell x-10j11969 x-element"><div id="x-pku9self" class="x-layout-none x-image-element x-pku9self x-element x-image--fill"><x-image class="x-image" data-priority="auto">{{ 'image'| placeholder_svg_tag: 'x-placeholder-svg' }}</x-image></div>{% assign product_x-h5oyvj8l = product %}{% assign collection_x-h5oyvj8l = collection %}<h3 id="x-h5oyvj8l" class="x-layout-none x-text x-h5oyvj8l x-element x-rte">
+{{ 'sections.foxify-1779043370efMqk.x-h5oyvj8l-text_html' | t }}</h3></div></div></div></div></div><div id="x-z92l21t6" class="x-section x-z92l21t6" style="--x-container-width: 1240px;"><div class="x-container-custom x-layout-grid"><div id="x-gkzwhpuz" class="x-layout-none x-grid x-gkzwhpuz x-element sm:x-grid-1 md:x-grid-1 x-grid-2" style="--x-column-gap: 24px; --x-md-column-gap: 24px; --x-sm-column-gap: 16px; --x-row-gap: 48px; --x-md-row-gap: 20px; --x-sm-row-gap: 16px;"><div id="x-w8lh9dvf" class="x-layout-auto x-cell x-w8lh9dvf x-element">{% assign product_x-8hbfleuu = product %}{% assign collection_x-8hbfleuu = collection %}<h2 id="x-8hbfleuu" class="x-layout-none x-text x-8hbfleuu x-element x-rte">
+{{ 'sections.foxify-1779043370efMqk.x-8hbfleuu-text_html' | t }}</h2></div><div id="x-undg5e9s" class="x-layout-auto x-cell x-undg5e9s x-element"><div id="x-ni2tdn89" class="x-layout-none x-countdown x-ni2tdn89 x-element"><x-countdown-timer data-countdown-id="x-ni2tdn89" class="x-countdown-timer x-items-center x-h-full" data-countdown-timer="2024-08-31T09:00:00.000Z" data-evergreen-time="24:00:00" data-countdown-type="fixed" data-hide-on-end="false"><div class="x-countdown-timer__block"><div class="x-countdown-timer__number x-countdown-timer__day">00</div></div><span class="x-countdown-timer__separator">:</span><div class="x-countdown-timer__block"><div class="x-countdown-timer__number x-countdown-timer__hour">00</div></div><span class="x-countdown-timer__separator">:</span><div class="x-countdown-timer__block"><div class="x-countdown-timer__number x-countdown-timer__min">00</div></div><span class="x-countdown-timer__separator">:</span><div class="x-countdown-timer__block"><div class="x-countdown-timer__number x-countdown-timer__sec">00</div></div></x-countdown-timer></div></div><div id="x-2nu8jrqt" class="x-layout-auto x-cell x-2nu8jrqt x-element">{% liquid
+           assign product_count = 4
+           if 4 > collection_x-dv3sx1gj.products.size 
+             assign product_count = collection_x-dv3sx1gj.products.size 
+           endif
+          %}<div id="x-dv3sx1gj" class="x-layout-none x-product-list x-dv3sx1gj x-element"><div class="product-list__grid x-grid sm:x-grid-2 md:x-grid-2 x-grid-4 x-mobile-swiper" style="--x-column-gap: 12px; --x-md-column-gap: 24px; --x-sm-column-gap: 16px; --x-row-gap: 12px; --x-md-row-gap: 24px; --x-sm-row-gap: 16px;">{% if collection_x-dv3sx1gj != blank %}{% for product_x-dv3sx1gj in collection_x-dv3sx1gj.products limit: 4 %}<div class="x-column">{% capture content_x-ikarcgxe %}{% endcapture %}{%render 'foxify-product-card', product: product_x-dv3sx1gj, card_style: '4', image_ratio: '4/3', text_align: 'left', ELEMENT_KEY: 'x', PREFIX_CLASS: 'x-',  CUSTOM_CLASS: 'x-product-card x-ikarcgxe x-element', content: content_x-ikarcgxe %}</div> {% endfor %} {% endif %}</div></div></div></div></div></div><div id="x-onhykj4n" class="x-section x-onhykj4n" style="--x-container-width: 1240px;"><div class="x-container-custom x-layout-grid"><div id="x-4it5bln2" class="x-layout-auto x-stack x-4it5bln2 x-element">{% assign product_x-8qv55l4f = product %}{% assign collection_x-8qv55l4f = collection %}<p id="x-8qv55l4f" class="x-layout-none x-text x-8qv55l4f x-element x-rte">
+{{ 'sections.foxify-1779043370efMqk.x-8qv55l4f-text_html' | t }}</p>{% assign product_x-o7jw5uzs = product %}{% assign collection_x-o7jw5uzs = collection %}<h2 id="x-o7jw5uzs" class="x-layout-none x-text x-o7jw5uzs x-element x-rte">
+{{ 'sections.foxify-1779043370efMqk.x-o7jw5uzs-text_html' | t }}</h2></div>{% assign product_x-x12gsfwj = product %}{% assign collection_x-x12gsfwj = collection %}<p id="x-x12gsfwj" class="x-layout-none x-text x-x12gsfwj x-element x-rte">
+{{ 'sections.foxify-1779043370efMqk.x-x12gsfwj-text_html' | t }}</p></div></div>
+<script data-foxify-custom-code-page="js" defer>{{ foxifyCustomJs }}</script>
+{% liquid
+            assign theme_settings = shop.metafields.foxify.theme_settings.value
+            assign customCodeBody = theme_settings.customCodeBody
+            echo customCodeBody
+          %}
+
+</div>
+{% schema %}
+  {
+  "name": "Foxify main content",
+  "class": "foxify-main f-app",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Customize main content",
+      "info": "Go to [Foxify app](https://admin.shopify.com/store/1cgij0-at/apps/foxify-builder/studio?id=1779043370efMqk&type=regular) to edit this section."
+    }
+  ],
+  "locales": {
+    "en": {
+      "x-2cw8ty14-text_html": "Nuevas llegadas",
+      "x-9jkbsdmq-text_html": "Gadgets inteligentes para tu hogar",
+      "x-666l63cu-button_label_html": "Descubrir",
+      "x-83niyqad-text_html": "Automatiza tu hogar inteligente",
+      "x-g73uug8n-text_html": "Descubre gadgets innovadores que transforman tu espacio en un hogar moderno y eficiente",
+      "x-zakrjl22-button_label_html": "Explorar ahora",
+      "x-7lzh8cw5-text_html": "Organización y decoración premium",
+      "x-go31zd07-text_html": "Soluciones elegantes para optimizar y embellecer cada rincón de tu casa",
+      "x-b9qe66se-button_label_html": "Ver colección",
+      "x-xvbcvxj9-text_html": "Por qué elegirnos",
+      "x-nossc2t7-text_html": "Confianza y calidad garantizadas",
+      "x-9xvapqi9-text_html": "Envío gratis a toda México",
+      "x-krfu3rxt-text_html": "Pago seguro con múltiples opciones",
+      "x-h5oyvj8l-text_html": "Garantía de satisfacción en todos nuestros productos",
+      "x-8hbfleuu-text_html": "Más vendidos",
+      "x-ni2tdn89-day_label_html": "Days",
+      "x-ni2tdn89-hour_label_html": "Hours",
+      "x-ni2tdn89-min_label_html": "Mins",
+      "x-ni2tdn89-sec_label_html": "Seg",
+      "x-x12gsfwj-text_html": "En nuestra tienda de gadgets para el hogar, nos comprometemos a ofrecerte productos de calidad premium con la mejor experiencia de compra. Todos nuestros artículos de automatización, decoración y organización están seleccionados cuidadosamente para mexicanos que buscan modernizar sus espacios. Contamos con envío gratis en compras mayores a $500, garantía de satisfacción, y atención al cliente disponible de lunes a viernes. Nuestras políticas de privacidad protegen tus datos, mientras que nuestros términos de servicio garantizan transacciones seguras. Si necesitas devolver un producto, tenemos un proceso simple dentro de 30 días. ¡Gracias por confiar en nosotros!",
+      "x-8qv55l4f-text_html": "Contáctanos",
+      "x-o7jw5uzs-text_html": "¿Preguntas? Estamos aquí para ayudarte. Envía un correo a soporte@tutienda.com o llama al +52 (55) 1234-5678. Consulta nuestras políticas de privacidad, términos de servicio y política de devoluciones para más información sobre cómo protegemos tu compra y datos personales."
+    },
+    "es": {
+      "x-2cw8ty14-text_html": "Nuevas llegadas",
+      "x-9jkbsdmq-text_html": "Gadgets inteligentes para tu hogar",
+      "x-666l63cu-button_label_html": "Descubrir",
+      "x-83niyqad-text_html": "Automatiza tu hogar inteligente",
+      "x-g73uug8n-text_html": "Descubre gadgets innovadores que transforman tu espacio en un hogar moderno y eficiente",
+      "x-zakrjl22-button_label_html": "Explorar ahora",
+      "x-7lzh8cw5-text_html": "Organización y decoración premium",
+      "x-go31zd07-text_html": "Soluciones elegantes para optimizar y embellecer cada rincón de tu casa",
+      "x-b9qe66se-button_label_html": "Ver colección",
+      "x-xvbcvxj9-text_html": "Por qué elegirnos",
+      "x-nossc2t7-text_html": "Confianza y calidad garantizadas",
+      "x-9xvapqi9-text_html": "Envío gratis a toda México",
+      "x-krfu3rxt-text_html": "Pago seguro con múltiples opciones",
+      "x-h5oyvj8l-text_html": "Garantía de satisfacción en todos nuestros productos",
+      "x-8hbfleuu-text_html": "Más vendidos",
+      "x-ni2tdn89-day_label_html": "Days",
+      "x-ni2tdn89-hour_label_html": "Hours",
+      "x-ni2tdn89-min_label_html": "Mins",
+      "x-ni2tdn89-sec_label_html": "Seg",
+      "x-x12gsfwj-text_html": "En nuestra tienda de gadgets para el hogar, nos comprometemos a ofrecerte productos de calidad premium con la mejor experiencia de compra. Todos nuestros artículos de automatización, decoración y organización están seleccionados cuidadosamente para mexicanos que buscan modernizar sus espacios. Contamos con envío gratis en compras mayores a $500, garantía de satisfacción, y atención al cliente disponible de lunes a viernes. Nuestras políticas de privacidad protegen tus datos, mientras que nuestros términos de servicio garantizan transacciones seguras. Si necesitas devolver un producto, tenemos un proceso simple dentro de 30 días. ¡Gracias por confiar en nosotros!",
+      "x-8qv55l4f-text_html": "Contáctanos",
+      "x-o7jw5uzs-text_html": "¿Preguntas? Estamos aquí para ayudarte. Envía un correo a soporte@tutienda.com o llama al +52 (55) 1234-5678. Consulta nuestras políticas de privacidad, términos de servicio y política de devoluciones para más información sobre cómo protegemos tu compra y datos personales."
+    }
+  }
+}
+{% endschema %}
+  
