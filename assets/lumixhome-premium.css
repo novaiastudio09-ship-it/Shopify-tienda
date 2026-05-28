@@ -1,6 +1,7 @@
 /* =============================================================
    LumixHome — Premium Visual Identity System
    Aesthetic references: Apple, Zara Home, Japandi
+   !important usado selectivamente para ganar vs Foxify CSS
    ============================================================= */
 
 /* === DESIGN TOKENS === */
@@ -27,158 +28,155 @@
 
 /* === ANTIALIASING & RENDERING === */
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  text-rendering: optimizeLegibility !important;
+  background-color: #FAFAF8 !important;
+  color: #1A1A18 !important;
 }
 
 /* === TYPOGRAPHY SYSTEM === */
 h1, h2, h3, h4, h5,
 .h0, .h1, .h2, .h3, .h4, .h5 {
-  letter-spacing: var(--lh-tracking-heading);
-  line-height: 1.08;
-  font-weight: 600;
+  letter-spacing: var(--lh-tracking-heading) !important;
+  line-height: 1.08 !important;
+  font-weight: 600 !important;
 }
 
 .h0 {
-  letter-spacing: var(--lh-tracking-tight);
-  line-height: 1.02;
+  letter-spacing: var(--lh-tracking-tight) !important;
+  line-height: 1.02 !important;
 }
 
 h1, .h1 {
-  letter-spacing: -0.03em;
-  line-height: 1.06;
+  letter-spacing: -0.03em !important;
+  line-height: 1.06 !important;
 }
 
 h2, .h2 {
-  letter-spacing: -0.025em;
-  line-height: 1.1;
+  letter-spacing: -0.025em !important;
+  line-height: 1.1 !important;
 }
 
 h3, .h3 {
-  letter-spacing: -0.02em;
-  line-height: 1.2;
+  letter-spacing: -0.02em !important;
+  line-height: 1.2 !important;
 }
 
 .caption-with-letter-spacing {
-  letter-spacing: var(--lh-tracking-label);
-  font-size: 1rem;
-  font-weight: 500;
+  letter-spacing: var(--lh-tracking-label) !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
 }
 
 .caption-with-letter-spacing--medium {
-  letter-spacing: var(--lh-tracking-label);
+  letter-spacing: var(--lh-tracking-label) !important;
 }
 
 /* === WHITE SPACE SYSTEM === */
 .page-width {
-  padding-left: 2.4rem;
-  padding-right: 2.4rem;
+  padding-left: 2.4rem !important;
+  padding-right: 2.4rem !important;
 }
 
 @media screen and (min-width: 750px) {
   .page-width {
-    padding-left: 5.6rem;
-    padding-right: 5.6rem;
+    padding-left: 5.6rem !important;
+    padding-right: 5.6rem !important;
   }
 }
 
 @media screen and (min-width: 990px) {
   .page-width {
-    padding-left: 7.2rem;
-    padding-right: 7.2rem;
+    padding-left: 7.2rem !important;
+    padding-right: 7.2rem !important;
   }
 }
 
 .section + .section {
-  margin-top: 7.2rem;
+  margin-top: 7.2rem !important;
 }
 
 @media screen and (min-width: 990px) {
   .section + .section {
-    margin-top: 11.2rem;
+    margin-top: 11.2rem !important;
   }
 }
 
 .title,
 .title-wrapper-with-link {
-  margin-top: 0;
-  margin-bottom: 4rem;
+  margin-top: 0 !important;
+  margin-bottom: 4rem !important;
 }
 
 .title-wrapper-with-link {
-  margin-bottom: 4.8rem;
+  margin-bottom: 4.8rem !important;
 }
 
 @media screen and (min-width: 990px) {
   .title,
   .title-wrapper-with-link {
-    margin-bottom: 5.6rem;
+    margin-bottom: 5.6rem !important;
   }
 }
 
 /* === GRID SPACING === */
 .grid {
-  column-gap: 2rem;
-  row-gap: 3.2rem;
+  column-gap: 2rem !important;
+  row-gap: 3.2rem !important;
 }
 
 @media screen and (min-width: 750px) {
   .grid {
-    column-gap: 2.4rem;
-    row-gap: 4rem;
+    column-gap: 2.4rem !important;
+    row-gap: 4rem !important;
   }
 }
 
 /* === HEADER === */
 .header-wrapper {
-  background-color: rgba(250, 250, 248, 0.94);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(26, 26, 24, 0.07);
+  background-color: rgba(250, 250, 248, 0.94) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(26, 26, 24, 0.07) !important;
 }
 
 .header {
-  min-height: 6.4rem;
+  min-height: 6.4rem !important;
 }
 
 .header__heading-link .h2,
 .header__heading-link {
-  font-size: 1.6rem;
-  letter-spacing: var(--lh-tracking-label);
-  text-transform: uppercase;
-  font-weight: 700;
+  font-size: 1.6rem !important;
+  letter-spacing: var(--lh-tracking-label) !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
 }
 
 .header__menu-item span,
 .header__active-menu-item {
-  font-size: 1.15rem;
-  letter-spacing: var(--lh-tracking-label);
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-.header__menu-item:hover .header__active-menu-item {
-  text-decoration: none;
-  opacity: 0.6;
+  font-size: 1.15rem !important;
+  letter-spacing: var(--lh-tracking-label) !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
 }
 
 /* === ANNOUNCEMENT BAR === */
 .announcement-bar__message {
-  font-size: 1.1rem;
-  letter-spacing: var(--lh-tracking-label);
-  text-transform: uppercase;
-  font-weight: 500;
+  font-size: 1.1rem !important;
+  letter-spacing: var(--lh-tracking-label) !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
 }
 
 /* === HERO BANNER === */
 .image-banner {
-  min-height: 82vh;
+  min-height: 82vh !important;
 }
 
 @media screen and (min-width: 990px) {
   .image-banner {
-    min-height: 88vh;
+    min-height: 88vh !important;
   }
 }
 
@@ -192,53 +190,40 @@ h3, .h3 {
 
 .banner__content h2.h0,
 .banner__content .banner__heading {
-  font-size: clamp(4.2rem, 7.5vw, 9.6rem);
-  font-weight: 600;
-  letter-spacing: var(--lh-tracking-tight);
-  line-height: 1.0;
+  font-size: clamp(4.2rem, 7.5vw, 9.6rem) !important;
+  font-weight: 600 !important;
+  letter-spacing: var(--lh-tracking-tight) !important;
+  line-height: 1.0 !important;
 }
 
 .banner__content .rte p,
 .banner__subheading {
-  font-size: 1.55rem;
-  letter-spacing: 0.01em;
-  line-height: 1.72;
-  opacity: 0.8;
-  max-width: 46ch;
+  font-size: 1.55rem !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1.72 !important;
+  opacity: 0.8 !important;
+  max-width: 46ch !important;
 }
 
 /* === BUTTONS — Minimal Authority === */
 .button,
 .shopify-challenge__button,
 .customer button {
-  letter-spacing: var(--lh-tracking-label);
-  text-transform: uppercase;
-  font-size: 1.1rem;
-  font-weight: 600;
-  min-height: 5.2rem;
-  padding: 0 4.2rem;
+  letter-spacing: var(--lh-tracking-label) !important;
+  text-transform: uppercase !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  min-height: 5.2rem !important;
+  padding: 0 4.2rem !important;
   transition: opacity var(--lh-duration-hover) var(--lh-ease-swift),
               transform var(--lh-duration-hover) var(--lh-ease-swift),
               background-color var(--lh-duration-hover) var(--lh-ease-swift);
-  border-radius: 0;
+  border-radius: 0 !important;
 }
 
 .button:not([disabled]):hover {
   opacity: 0.82;
   transform: translateY(-1px);
-}
-
-.button--secondary {
-  background-color: transparent;
-}
-
-.button--secondary::after {
-  border-color: rgba(var(--color-foreground), 0.35) !important;
-  transition: border-color var(--lh-duration-hover) var(--lh-ease-swift);
-}
-
-.button--secondary:hover::after {
-  border-color: rgba(var(--color-foreground), 0.75) !important;
 }
 
 /* === PRODUCT CARDS === */
@@ -253,27 +238,25 @@ h3, .h3 {
 }
 
 .card__information {
-  padding: 1.6rem 0.4rem 0;
+  padding: 1.6rem 0.4rem 0 !important;
 }
 
 .card__heading,
 .card__heading a {
-  font-size: 1.35rem;
-  letter-spacing: var(--lh-tracking-normal);
-  font-weight: 500;
-  line-height: 1.45;
+  font-size: 1.35rem !important;
+  letter-spacing: var(--lh-tracking-normal) !important;
+  font-weight: 500 !important;
+  line-height: 1.45 !important;
 }
 
-/* Vendor tag */
 .card__vendor {
-  font-size: 1rem;
-  letter-spacing: var(--lh-tracking-label);
-  text-transform: uppercase;
+  font-size: 1rem !important;
+  letter-spacing: var(--lh-tracking-label) !important;
+  text-transform: uppercase !important;
   opacity: 0.45;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.4rem !important;
 }
 
-/* Image hover refinement */
 .card__media .media > img:first-child {
   transition: opacity 0.5s ease, transform var(--lh-duration-smooth) var(--lh-ease-premium);
 }
@@ -285,223 +268,224 @@ h3, .h3 {
 
 /* === PRICE — Elegant & Discreet === */
 .price {
-  font-size: 1.4rem;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  color: rgba(var(--color-foreground), 0.82);
+  font-size: 1.4rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.01em !important;
+  color: rgba(var(--color-foreground), 0.82) !important;
 }
 
 .price__container .price--large {
-  font-size: 2.4rem;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-  color: rgb(var(--color-foreground));
+  font-size: 2.4rem !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.01em !important;
+  color: rgb(var(--color-foreground)) !important;
 }
 
 .price--on-sale .price__regular .money {
   opacity: 0.35;
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: 1.2rem !important;
+  font-weight: 400 !important;
 }
 
 .price--on-sale .price__sale {
-  color: rgb(var(--color-foreground));
+  color: rgb(var(--color-foreground)) !important;
 }
 
-/* No aggressive red sale badges */
+/* No aggressive red/green sale badges */
 .badge.badge--sale,
 .price-badge-sale {
-  background-color: rgba(var(--color-foreground), 0.07);
-  color: rgba(var(--color-foreground), 0.65);
-  font-size: 0.9rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-weight: 500;
-  border-radius: 0;
+  background-color: rgba(var(--color-foreground), 0.07) !important;
+  color: rgba(var(--color-foreground), 0.65) !important;
+  font-size: 0.9rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  border-radius: 0 !important;
 }
 
 /* === PRODUCT PAGE === */
 .product__title {
-  font-size: clamp(2.4rem, 3.5vw, 4rem);
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  line-height: 1.12;
-  margin-bottom: 1.6rem;
+  font-size: clamp(2.4rem, 3.5vw, 4rem) !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.12 !important;
+  margin-bottom: 1.6rem !important;
 }
 
 .product__vendor {
-  font-size: 1.05rem;
-  letter-spacing: var(--lh-tracking-label);
-  text-transform: uppercase;
+  font-size: 1.05rem !important;
+  letter-spacing: var(--lh-tracking-label) !important;
+  text-transform: uppercase !important;
   opacity: 0.45;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.2rem !important;
 }
 
 .product__description {
-  font-size: 1.5rem;
-  line-height: 1.78;
-  color: rgba(var(--color-foreground), 0.68);
-  letter-spacing: 0.005em;
-  max-width: 50ch;
+  font-size: 1.5rem !important;
+  line-height: 1.78 !important;
+  color: rgba(var(--color-foreground), 0.68) !important;
+  letter-spacing: 0.005em !important;
+  max-width: 50ch !important;
 }
 
 .product__description p {
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.6rem !important;
 }
 
 .product__description h2,
 .product__description h3 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  margin: 2.4rem 0 0.8rem;
+  font-size: 1.6rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  margin: 2.4rem 0 0.8rem !important;
 }
 
 /* Variant pills */
 .variant-pills__label {
-  font-size: 1.15rem;
-  letter-spacing: 0.04em;
-  padding: 0.9rem 2rem;
-  border-radius: 0;
-  font-weight: 400;
+  font-size: 1.15rem !important;
+  letter-spacing: 0.04em !important;
+  padding: 0.9rem 2rem !important;
+  border-radius: 0 !important;
+  font-weight: 400 !important;
   transition: all var(--lh-duration-hover) var(--lh-ease-swift);
 }
 
 .variant-pills__input:checked + .variant-pills__label {
-  border-color: rgb(var(--color-foreground));
-  background-color: rgb(var(--color-foreground));
-  color: rgb(var(--color-background));
+  border-color: rgb(var(--color-foreground)) !important;
+  background-color: rgb(var(--color-foreground)) !important;
+  color: rgb(var(--color-background)) !important;
 }
 
-/* Product info padding */
 @media screen and (min-width: 750px) {
   .product__info-wrapper {
-    padding-left: 5.6rem;
+    padding-left: 5.6rem !important;
   }
 }
 
 /* === RELATED PRODUCTS === */
 .related-products {
-  border-top: 1px solid rgba(var(--color-foreground), 0.07);
-  padding-top: 6.4rem;
+  border-top: 1px solid rgba(var(--color-foreground), 0.07) !important;
+  padding-top: 6.4rem !important;
 }
 
 .related-products .title {
-  font-size: 2rem;
-  letter-spacing: -0.025em;
+  font-size: 2rem !important;
+  letter-spacing: -0.025em !important;
 }
 
 /* === COLLECTION GRID === */
 .collection-hero__title,
 .main-collection-banner .title {
-  font-size: clamp(3.2rem, 5vw, 6.4rem);
-  letter-spacing: var(--lh-tracking-tight);
-  font-weight: 600;
-  line-height: 1.05;
+  font-size: clamp(3.2rem, 5vw, 6.4rem) !important;
+  letter-spacing: var(--lh-tracking-tight) !important;
+  font-weight: 600 !important;
+  line-height: 1.05 !important;
+}
+
+/* Section title overrides */
+.title.inline-richtext {
+  font-size: clamp(2.4rem, 3.5vw, 4rem) !important;
+  letter-spacing: -0.03em !important;
 }
 
 /* === FOOTER === */
 .footer {
-  border-top: 1px solid rgba(var(--color-foreground), 0.07);
+  border-top: 1px solid rgba(var(--color-foreground), 0.07) !important;
+  background-color: #FAFAF8 !important;
 }
 
 .footer-block__heading {
-  font-size: 1rem;
-  letter-spacing: var(--lh-tracking-label);
-  text-transform: uppercase;
-  font-weight: 600;
+  font-size: 1rem !important;
+  letter-spacing: var(--lh-tracking-label) !important;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
   opacity: 0.42;
-  margin-bottom: 2.4rem;
+  margin-bottom: 2.4rem !important;
 }
 
 .footer-block__details-content .list-menu__item--link,
 .footer-block__details-content a {
-  font-size: 1.35rem;
-  font-weight: 400;
+  font-size: 1.35rem !important;
+  font-weight: 400 !important;
   opacity: 0.65;
-  letter-spacing: 0;
+  letter-spacing: 0 !important;
   transition: opacity var(--lh-duration-hover) ease;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .footer-block__details-content .list-menu__item--link:hover {
   opacity: 1;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .footer__copyright.caption,
 .footer__copyright .copyright__content,
 .footer__copyright .copyright__content a {
-  font-size: 1.1rem;
+  font-size: 1.1rem !important;
   opacity: 0.38;
-  letter-spacing: 0.04em;
-  text-decoration: none;
+  letter-spacing: 0.04em !important;
+  text-decoration: none !important;
 }
 
 /* === CART DRAWER === */
 .cart-drawer__header {
-  border-bottom: 1px solid rgba(var(--color-foreground), 0.07);
-  padding: 2.4rem 3.2rem;
+  border-bottom: 1px solid rgba(var(--color-foreground), 0.07) !important;
+  padding: 2.4rem 3.2rem !important;
 }
 
 .cart-drawer__title {
-  font-size: 1.2rem;
-  letter-spacing: var(--lh-tracking-label);
-  text-transform: uppercase;
-  font-weight: 600;
+  font-size: 1.2rem !important;
+  letter-spacing: var(--lh-tracking-label) !important;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
 }
 
 .cart-item__name {
-  font-size: 1.35rem;
-  font-weight: 500;
-  letter-spacing: var(--lh-tracking-normal);
+  font-size: 1.35rem !important;
+  font-weight: 500 !important;
+  letter-spacing: var(--lh-tracking-normal) !important;
 }
 
 /* === FORMS & INPUTS === */
 .field__label {
-  letter-spacing: 0.04em;
+  letter-spacing: 0.04em !important;
 }
 
 .field__input,
 .select__select,
 .customer .field input,
 .customer select {
-  border-radius: 0;
-  font-size: 1.5rem;
+  border-radius: 0 !important;
+  font-size: 1.5rem !important;
 }
 
 /* === PREDICTIVE SEARCH === */
 .predictive-search__heading {
-  font-size: 1rem;
-  letter-spacing: var(--lh-tracking-label);
-  text-transform: uppercase;
-  font-weight: 600;
+  font-size: 1rem !important;
+  letter-spacing: var(--lh-tracking-label) !important;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
   opacity: 0.42;
 }
 
 /* === FACETS / FILTERS === */
 .facet-filters__label,
 .facet-filters__sort .caption-large {
-  font-size: 1.1rem;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-/* === LOADING REFINEMENTS === */
-.loading__spinner .path {
-  stroke: rgba(var(--color-foreground), 0.4);
+  font-size: 1.1rem !important;
+  letter-spacing: 0.07em !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
 }
 
 /* === SCROLL TRIGGER ANIMATION TUNING === */
 .scroll-trigger.animate--slide-in {
-  animation-duration: 0.65s;
-  animation-timing-function: var(--lh-ease-premium);
+  animation-duration: 0.65s !important;
+  animation-timing-function: var(--lh-ease-premium) !important;
 }
 
 .scroll-trigger.animate--fade-in {
-  animation-duration: 0.5s;
-  animation-timing-function: ease;
+  animation-duration: 0.5s !important;
+  animation-timing-function: ease !important;
 }
 
 /* === MEDIA / IMAGES === */
@@ -511,41 +495,37 @@ h3, .h3 {
 
 /* === SELECTION COLOR === */
 ::selection {
-  background-color: rgba(var(--color-foreground), 0.12);
+  background-color: rgba(var(--color-foreground), 0.12) !important;
 }
 
 /* === HORIZONTAL RULES === */
 hr {
-  background-color: rgba(var(--color-foreground), 0.08);
-  margin: 6.4rem 0;
+  background-color: rgba(var(--color-foreground), 0.08) !important;
+  margin: 6.4rem 0 !important;
 }
 
 /* === FEATURED PRODUCT SECTION === */
-.featured-product__media-container {
-  max-width: 100%;
-}
-
 @media screen and (min-width: 990px) {
   .featured-product .product__info-wrapper {
-    padding-left: 6.4rem;
+    padding-left: 6.4rem !important;
   }
 }
 
 /* === QUICK ADD BUTTON === */
 .quick-add__submit {
-  letter-spacing: var(--lh-tracking-label);
-  text-transform: uppercase;
-  font-size: 1.05rem;
-  font-weight: 600;
-  border-radius: 0;
+  letter-spacing: var(--lh-tracking-label) !important;
+  text-transform: uppercase !important;
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  border-radius: 0 !important;
 }
 
 /* === PAGINATION === */
 .pagination__list {
-  gap: 0.4rem;
+  gap: 0.4rem !important;
 }
 
 .pagination__item .link {
-  font-size: 1.2rem;
-  letter-spacing: 0.04em;
+  font-size: 1.2rem !important;
+  letter-spacing: 0.04em !important;
 }

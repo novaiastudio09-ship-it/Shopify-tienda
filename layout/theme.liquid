@@ -256,7 +256,6 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
-    {{ 'lumixhome-premium.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {%- if settings.cart_type == 'drawer' -%}
@@ -297,7 +296,106 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-  {%- render 'foxify-head' -%}</head>
+  {%- render 'foxify-head' -%}
+  {{ 'lumixhome-premium.css' | asset_url | stylesheet_tag }}
+  <style>
+    /* ============================================================
+       LumixHome Nuclear Override Block
+       Carga LAST en el <head> — siempre gana sobre Foxify CSS
+       ============================================================ */
+    html,
+    html body,
+    html body.gradient {
+      background-color: #FAFAF8 !important;
+      color: #1A1A18 !important;
+    }
+    html body .color-scheme-1,
+    html body [class*="color-scheme-1"],
+    html body .color-background,
+    html body .background-primary {
+      background-color: #FAFAF8 !important;
+    }
+    html body .color-scheme-2,
+    html body [class*="color-scheme-2"] {
+      background-color: #F2EDE6 !important;
+    }
+    html body .color-scheme-3,
+    html body [class*="color-scheme-3"] {
+      background-color: #1A1A18 !important;
+      color: #F2EDE6 !important;
+    }
+    html body .color-scheme-5,
+    html body [class*="color-scheme-5"] {
+      background-color: #E6E0D4 !important;
+    }
+    html body,
+    html body p,
+    html body li,
+    html body span,
+    html body a,
+    html body div,
+    html body section,
+    html body article {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    }
+    html body h1, html body h2, html body h3, html body h4, html body h5,
+    html body .h0, html body .h1, html body .h2, html body .h3, html body .h4 {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+      letter-spacing: -0.03em !important;
+      font-weight: 600 !important;
+      line-height: 1.08 !important;
+    }
+    html body .section + .section,
+    html body .shopify-section + .shopify-section {
+      margin-top: 100px !important;
+    }
+    html body .page-width {
+      padding-left: 7rem !important;
+      padding-right: 7rem !important;
+    }
+    @media (max-width: 749px) {
+      html body .page-width {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+      }
+    }
+    html body .button,
+    html body .btn,
+    html body button[type="submit"],
+    html body input[type="submit"] {
+      border-radius: 0 !important;
+      font-family: 'DM Sans', sans-serif !important;
+      letter-spacing: 0.10em !important;
+      text-transform: uppercase !important;
+      font-size: 1.1rem !important;
+      font-weight: 600 !important;
+    }
+    html body .foxify-header,
+    html body .section-header,
+    html body header.header-wrapper,
+    html body .header-wrapper {
+      background-color: rgba(250, 250, 248, 0.95) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+    }
+    html body footer.footer,
+    html body .footer {
+      background-color: #FAFAF8 !important;
+      border-top: 1px solid rgba(26, 26, 24, 0.08) !important;
+    }
+    html body .badge,
+    html body .price-badge-sale,
+    html body .product__badge,
+    html body .card__badge {
+      border-radius: 0 !important;
+    }
+    html body .variant-pills__label,
+    html body .swatch__input + label,
+    html body .block-swatch {
+      border-radius: 0 !important;
+    }
+  </style>
+</head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">{% sections 'foxify-header-group' %}
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
